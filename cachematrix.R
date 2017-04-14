@@ -62,6 +62,13 @@ cacheSolve <- function(x, ...) {
 }
 
 
+# Test Example - Run all the steps in order
+M <- makeCacheMatrix(matrix(sample(3*3),3,3)) # create random 3x3 square matrix
+M$getInverse() # Should return NULL
+cacheSolve(M) # find the inverse of matrix 
+cacheSolve(M) # gets the inverse of matrix from cache
+M$getInverse() # Should return the inverse now
+
 
 
 
